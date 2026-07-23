@@ -215,10 +215,230 @@ h2 {
   min-height: 18rem;
 }
 
-.empty-state {
-  margin-bottom: 0.45rem !important;
-  color: var(--blue);
-  font-weight: 750;
+/* Selected work — project panels */
+.work .section-content {
+  max-width: none;
+}
+
+.project-panels {
+  display: grid;
+  gap: clamp(1.25rem, 2.5vw, 2rem);
+  margin-top: clamp(2.5rem, 5vw, 4.5rem);
+}
+
+.project-panel {
+  display: flex;
+  align-items: center;
+  gap: clamp(1.75rem, 4vw, 3.5rem);
+  padding: clamp(1.75rem, 4vw, 3.25rem);
+  border-radius: 1rem;
+  color: #F2F0EA;
+  transition: transform 0.35s ease, box-shadow 0.35s ease, opacity 0.6s ease, translate 0.6s ease;
+}
+
+.project-panel:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 24px 60px rgba(0, 0, 0, 0.25);
+}
+
+.panel-gridmind {
+  background-color: #14120E;
+  background-image: radial-gradient(ellipse at 18% 45%, rgba(224, 123, 0, 0.26), transparent 55%);
+}
+
+.panel-cosmicmerge {
+  flex-direction: row-reverse;
+  background-image: linear-gradient(135deg, #0D0A1E 0%, #151038 60%, #1D1147 100%);
+}
+
+.panel-book {
+  background-color: #0A0A0A;
+}
+
+.panel-tag {
+  margin: 0;
+  font-size: 0.72rem;
+  font-weight: 800;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+}
+
+.panel-gridmind .panel-tag,
+.panel-gridmind .panel-cta {
+  color: #FFB85C;
+}
+
+.panel-cosmicmerge .panel-tag,
+.panel-cosmicmerge .panel-cta {
+  color: #A58CFF;
+}
+
+.panel-book .panel-tag,
+.panel-book .panel-cta {
+  color: #F59E0B;
+}
+
+.project-panel h3 {
+  margin: 0.5rem 0 0.9rem;
+  font-size: clamp(1.9rem, 3.2vw, 3rem);
+}
+
+.panel-text > p:not(.panel-tag) {
+  max-width: 34rem;
+  margin-bottom: 0;
+  font-size: clamp(1rem, 1.3vw, 1.13rem);
+  line-height: 1.55;
+  opacity: 0.85;
+}
+
+.panel-cta {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  min-height: 44px;
+  margin-top: 0.9rem;
+  font-weight: 700;
+  text-underline-offset: 0.28em;
+}
+
+.panel-cta span {
+  transition: transform 0.25s ease;
+}
+
+.panel-cta:hover span {
+  transform: translateX(4px);
+}
+
+.panel-cosmicmerge .panel-text {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  text-align: right;
+}
+
+.panel-devices {
+  display: flex;
+  flex-shrink: 0;
+  align-items: flex-end;
+  gap: 1.25rem;
+}
+
+.device-iphone {
+  position: relative;
+  width: clamp(11rem, 16vw, 15rem);
+  aspect-ratio: 1470 / 3000;
+  filter: drop-shadow(0 25px 50px rgba(0, 0, 0, 0.6));
+}
+
+.device-iphone video {
+  position: absolute;
+  left: 5.102%;
+  top: 2.267%;
+  width: 89.796%;
+  height: 95.5%;
+  object-fit: cover;
+  background: #000;
+  border-radius: 6.5% / 3.1%;
+}
+
+.device-frame {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  pointer-events: none;
+}
+
+.device-watch {
+  position: relative;
+  width: clamp(8.5rem, 12vw, 11.5rem);
+  aspect-ratio: 600 / 960;
+  filter: drop-shadow(0 20px 40px rgba(0, 0, 0, 0.6));
+}
+
+.device-watch video {
+  position: absolute;
+  left: 14.833%;
+  top: 23.229%;
+  width: 70.333%;
+  height: 53.542%;
+  object-fit: cover;
+  background: #000;
+  border-radius: 28.4% / 23.3%;
+}
+
+.cm-visual {
+  position: relative;
+  flex-shrink: 0;
+  width: clamp(14rem, 30vw, 22rem);
+}
+
+.cm-visual > img {
+  display: block;
+  width: 100%;
+  height: auto;
+  border-radius: 0.85rem;
+  box-shadow: 0 18px 50px rgba(0, 0, 0, 0.55);
+}
+
+.cm-wordmark {
+  position: absolute;
+  inset: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-end;
+  margin: 0;
+  padding-bottom: 10%;
+}
+
+.cm-word {
+  background-image: linear-gradient(90deg, #9EE8FF, #E6D9FF 45%, #FFC37A);
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+  filter: drop-shadow(0 2px 14px rgba(0, 0, 0, 0.9));
+  font-size: clamp(1rem, 2vw, 1.5rem);
+  font-weight: 200;
+  letter-spacing: 0.42em;
+  text-indent: 0.42em;
+  text-transform: uppercase;
+}
+
+.cm-sub {
+  margin-top: 0.4rem;
+  color: rgba(240, 238, 255, 0.75);
+  font-size: 0.6rem;
+  letter-spacing: 0.34em;
+  text-indent: 0.34em;
+  text-transform: uppercase;
+}
+
+.book-visual {
+  flex-shrink: 0;
+  width: clamp(10rem, 18vw, 14rem);
+}
+
+.book-visual img {
+  display: block;
+  width: 100%;
+  height: auto;
+  border-radius: 0.5rem;
+  box-shadow: 0 18px 50px rgba(0, 0, 0, 0.6);
+}
+
+/* Scroll reveal — only when JS is running AND motion is welcome.
+   `translate` (not `transform`) so the hover lift composes independently. */
+@media (prefers-reduced-motion: no-preference) {
+  html.js .project-panel {
+    opacity: 0;
+    translate: 0 1.5rem;
+  }
+
+  html.js .project-panel.is-visible {
+    opacity: 1;
+    translate: none;
+  }
 }
 
 .contact {
@@ -275,6 +495,28 @@ h2 {
 
   .focus-card {
     min-height: 12rem;
+  }
+
+  .project-panel,
+  .panel-cosmicmerge {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .panel-devices,
+  .cm-visual,
+  .book-visual {
+    align-self: center;
+  }
+
+  .cm-visual,
+  .book-visual {
+    width: min(100%, 18rem);
+  }
+
+  .panel-cosmicmerge .panel-text {
+    align-items: flex-start;
+    text-align: left;
   }
 }
 
