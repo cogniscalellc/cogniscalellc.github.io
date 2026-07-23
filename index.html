@@ -135,5 +135,26 @@
       <span>Cogniscale LLC</span>
       <span>© 2026</span>
     </footer>
+
+    <script>
+      document.documentElement.classList.add("js");
+      const panels = document.querySelectorAll(".project-panel");
+      if ("IntersectionObserver" in window) {
+        const io = new IntersectionObserver(
+          (entries) => {
+            for (const entry of entries) {
+              if (entry.isIntersecting) {
+                entry.target.classList.add("is-visible");
+                io.unobserve(entry.target);
+              }
+            }
+          },
+          { threshold: 0.15 }
+        );
+        panels.forEach((panel) => io.observe(panel));
+      } else {
+        panels.forEach((panel) => panel.classList.add("is-visible"));
+      }
+    </script>
   </body>
 </html>
