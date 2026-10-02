@@ -255,6 +255,11 @@ h2 {
   background-color: #0A0A0A;
 }
 
+.panel-dustpan {
+  background-color: #0E1420;
+  background-image: radial-gradient(ellipse at 22% 50%, rgba(42, 120, 214, 0.3), transparent 58%);
+}
+
 .panel-tag {
   margin: 0;
   font-size: 0.72rem;
@@ -276,6 +281,11 @@ h2 {
 .panel-book .panel-tag,
 .panel-book .panel-cta {
   color: #F59E0B;
+}
+
+.panel-dustpan .panel-tag,
+.panel-dustpan .panel-cta {
+  color: #7CC4FF;
 }
 
 .project-panel h3 {
@@ -427,6 +437,17 @@ h2 {
   box-shadow: 0 18px 50px rgba(0, 0, 0, 0.6);
 }
 
+.dustpan-visual {
+  flex-shrink: 0;
+  width: clamp(10rem, 17vw, 14rem);
+}
+
+.dustpan-visual img {
+  display: block;
+  width: 100%;
+  height: auto;
+}
+
 /* Scroll reveal — only when JS is running AND motion is welcome.
    `translate` (not `transform`) so the hover lift composes independently. */
 @media (prefers-reduced-motion: no-preference) {
@@ -505,12 +526,14 @@ h2 {
 
   .panel-devices,
   .cm-visual,
-  .book-visual {
+  .book-visual,
+  .dustpan-visual {
     align-self: center;
   }
 
   .cm-visual,
-  .book-visual {
+  .book-visual,
+  .dustpan-visual {
     width: min(100%, 18rem);
   }
 

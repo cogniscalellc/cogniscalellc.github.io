@@ -8,6 +8,7 @@ Live site: [cogniscalellc.github.io](https://cogniscalellc.github.io)
 
 - `index.html` - semantic page content
 - `styles.css` - responsive layout and visual system
+- `assets/` - project imagery (GridMind device demos, CosmicMerge art, book cover, Dustpan icon)
 - `favicon.svg` - Cogniscale mark
 - `.nojekyll` - direct GitHub Pages publishing
 
